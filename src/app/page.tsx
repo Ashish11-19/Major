@@ -181,7 +181,7 @@ export default function Home() {
         durationPerWord={250} // speed up cycle
         totalDuration={2500} // total time before hiding preloader
       />
-      <SmoothCursor/>
+      <SmoothCursor />
       {/* HERO Section with parallax */}
       <div
         ref={ref}
@@ -189,6 +189,40 @@ export default function Home() {
       >
         <BackgroundRippleEffect />
         <motion.div style={{ y }} className="mt-60 w-full text-center">
+          <div className="fixed top-5 right-5 z-50">
+  <a href="/signupandlogin">
+    <button
+      type="button"
+      className="relative inline-flex items-center justify-center overflow-hidden rounded-xl font-semibold px-4 py-2 text-sm tracking-wide select-none bg-orange-600 text-white shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.05] active:scale-95"
+    >
+      <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-white/40 to-transparent opacity-50 blur-md -translate-x-3 skew-x-6"></span>
+
+      <span className="absolute inset-0 -z-10 rounded-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.25)_0%,_rgba(255,255,255,0)_70%)] opacity-40 blur-xl"></span>
+
+      <span className="relative z-10 mr-2 text-base drop-shadow-sm">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth="1.6"
+          stroke="white"
+          className="w-4 h-4"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 20.25a8.25 8.25 0 1115 0v.75H4.5v-.75z" />
+        </svg>
+      </span>
+
+      <span className="relative z-10 drop-shadow-sm font-bold">Login</span>
+
+      <span className="absolute inset-0 pointer-events-none opacity-0 hover:opacity-100 transition-opacity duration-500">
+        <span className="block w-[40px] h-[200%] bg-white/40 skew-x-[-30deg] translate-x-[-30px] animate-sweep blur-md"></span>
+      </span>
+    </button>
+  </a>
+</div>
+
+
           <h2 className="relative z-10 mx-auto max-w-4xl text-2xl font-bold text-neutral-800 md:text-4xl lg:text-7xl dark:text-neutral-100">
             PersonaShield
           </h2>
@@ -197,14 +231,13 @@ export default function Home() {
             text="Deepfake & Impersonation attack Detection Platform"
           />
           <WrapButton
-          href="/start"
-          className="mt-8 relative z-10 block mx-auto flex flex-row items-center justify-center mb-10"
-        >
-          <Globe className="animate-spin" />
-          Get Started
-        </WrapButton>
+            href="/start"
+            className="mt-8 relative z-10 block mx-auto flex flex-row items-center justify-center mb-10"
+          >
+            <Globe className="animate-spin" />
+            Get Started
+          </WrapButton>
         </motion.div>
-        
       </div>
 
       {/* INTRODUCTION Section */}
